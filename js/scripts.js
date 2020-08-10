@@ -13,17 +13,16 @@ function letterReverse(concatLetters) {
 //1
 function sentenceConcat(userInput) {
   let newSentence = userInput.concat(capitalized(userInput))
-
   let sentenceStart = sentenceDivide(userInput);
   let finalSentence = sentenceStart.concat(newSentence);
 
-  return newSentence;
+  return finalSentence;hello
 }
 
 function sentenceDivide(userInput) {
   let midLetterIndex = userInput.length / 2
   let midLetterRound = parseInt(midLetterIndex);
-  let middleLetter = charAt(midLetterRound);
+  let middleLetter = userInput.charAt(midLetterRound);
   return middleLetter;
 }
 
