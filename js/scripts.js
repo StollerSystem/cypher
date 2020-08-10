@@ -3,19 +3,17 @@ $(document).ready(function() {
 
 
 function capitalized(sentence) {
-  let capSentence = sentence.charAt(0).toUpperCase() + sentence.charAt(sentence.length - 1).toUpperCase();
-  let capLettersReversed = capReverse(capSentence);
-  return capLettersReversed;
+  let concatLetters = sentence.slice(0, 1).toUpperCase().concat(sentence.slice(-1).toUpperCase());
+  let reversedLetters = letterReverse(concatLetters);
 
+  return reversedLetters;
 }
 
-function capReverse(capSentence) {
-  console.log(capSentence);
-  let revSentence = capSentence.reverse();
-  return revSentence;
+function letterReverse(concatLetters) {
+  let letterArray = concatLetters.split("").reverse().join("");
+  return letterArray;
 }
 
 const userInput = prompt("Enter a sentence:");
-
 console.log(capitalized(userInput));
 });
