@@ -1,4 +1,5 @@
 $(document).ready(function() {
+// BUSINESS LOGIC
 //2
 function capitalized(sentence) {
   let concatLetters = sentence.slice(0, 1).toUpperCase().concat(sentence.slice(-1).toUpperCase());
@@ -27,7 +28,20 @@ function sentenceDivide(userInput) {
   let middleLetter = userInput.charAt(midLetterRound);
   return middleLetter;
 }
+//const userInput = prompt("Enter a sentence:");
 
-const userInput = prompt("Enter a sentence:");
-console.log(sentenceConcat(userInput));
+
+// USER INTERFACE
+$("#formOne").submit(function(event) {
+  const userInput = $("input#user-input").val();
+  //console.log(sentenceConcat(userInput));
+  event.preventDefault();
+
+  $(".finalSentence").append(sentenceConcat(userInput));
+  $("#finalSentence").show();
+})
+
+
 });
+
+
