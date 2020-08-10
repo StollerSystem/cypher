@@ -12,13 +12,15 @@ function letterReverse(concatLetters) {
 }
 //1
 function sentenceConcat(userInput) {
-  let newSentence = userInput.concat(capitalized(userInput))
-  let sentenceStart = sentenceDivide(userInput);
-  let finalSentence = sentenceStart.concat(newSentence);
+  // let newSentence = userInput.concat(capitalized(userInput))
+  // let sentenceStart = sentenceDivide(userInput);
+  // let finalSentence = sentenceStart.concat(newSentence);
+  let finalSentence = sentenceDivide(userInput).concat(userInput.concat(capitalized(userInput))).split("").reverse().join("");
 
-  return finalSentence;hello
+  //let reversedFinalSentence = finalSentence.split("").reverse().join("");
+  return finalSentence;
 }
-
+//4
 function sentenceDivide(userInput) {
   let midLetterIndex = userInput.length / 2
   let midLetterRound = parseInt(midLetterIndex);
