@@ -40,8 +40,6 @@ $("#formOne").submit(function(event) {
   $(".finalSentence").append(sentenceConcat(userInput));
   $("#finalSentence").show();
 })
-
-
 });
 
 
