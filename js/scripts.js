@@ -38,7 +38,7 @@ $("#formOne").submit(function(event) {
   event.preventDefault();
 
   $(".finalSentence").append(sentenceConcat(userInput));
-  $("#finalSentence").show();
+  $(".finalSentence").show();
 })
 });
 
